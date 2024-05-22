@@ -4,8 +4,28 @@
 
 # features
 
-- ダイスを振れる！！！！
-  - 正確には指定可能な自然数の部分集合からランダムな自然数を抽出するダイス
-- ダイスをユーザ側で作れるようにする！
+**trait** `Dice`
 
-これtodoだな？
+```rs
+struct MyDice;
+
+impl Dice<i32> for MyDice {
+  fn roll(&self) -> i32 {
+    32
+  }
+}
+```
+
+**builtin** `NormalDice`
+
+```rs
+use diceutil::builtin::NormalDice;
+use diceutil::Dice;
+
+let dice = NormalDice::new();
+println!("{}", dice.roll()); // 1..=6の範囲で数字がランダムに返される
+```
+
+# todo
+
+- ドキュメント書いたほうがいいよね〜〜
