@@ -29,3 +29,17 @@ mod impl_dice_test {
         assert_eq!(res1, res2);
     }
 }
+
+#[cfg(test)]
+mod builtin_dices {
+    use diceutil::builtin_dices::*;
+    use diceutil::Dice;
+
+    #[test]
+    fn normal_roll_test() {
+        let dice = NormalDice::new();
+        let rolled = dice.roll();
+        assert!(rolled.is_positive());
+        assert!((1..=6).contains(&rolled));
+    }
+}
