@@ -9,7 +9,7 @@ use std::sync::Mutex;
 /// ### Examples
 ///
 /// ```
-/// use diceutil::builtin::NormalDice;
+/// use diceutil::builtin_dices::NormalDice;
 /// use diceutil::Dice;
 ///
 /// # fn main() {
