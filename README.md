@@ -1,6 +1,7 @@
 # diceutil
 
-ダイス関連のいろいろを詰め込んだライブラリ(自分用)
+ダイス関連のいろいろを詰め込んだライブラリ(自分用)  
+[docs](https://tundraclimate.github.io/diceutil/diceutil/)
 
 # features
 
