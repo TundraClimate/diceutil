@@ -1,6 +1,6 @@
 var srcIndex = new Map(JSON.parse('[\
 ["cfg_if",["",[],["lib.rs"]]],\
-["diceutil",["",[["builtin_dices",[],["hundred_dice.rs","normal_dice.rs"]]],["builtin_dices.rs","lib.rs"]]],\
+["diceutil",["",[["builtin_dices",[],["hundred_dice.rs","normal_dice.rs","sized_dice.rs"]]],["builtin_dices.rs","lib.rs"]]],\
 ["getrandom",["",[],["error.rs","error_impls.rs","lazy.rs","lib.rs","linux_android_with_fallback.rs","use_file.rs","util.rs","util_libc.rs"]]],\
 ["libc",["",[["unix",[["linux_like",[["linux",[["arch",[["generic",[],["mod.rs"]]],["mod.rs"]],["gnu",[["b64",[["x86_64",[],["align.rs","mod.rs","not_x32.rs"]]],["mod.rs"]]],["align.rs","mod.rs"]]],["align.rs","mod.rs","non_exhaustive.rs"]]],["mod.rs"]]],["align.rs","mod.rs"]]],["fixed_width_ints.rs","lib.rs","macros.rs"]]],\
 ["ppv_lite86",["",[["x86_64",[],["mod.rs","sse2.rs"]]],["lib.rs","soft.rs","types.rs"]]],\

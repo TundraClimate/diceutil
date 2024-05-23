@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["HundredDice","NormalDice"]};
+window.SIDEBAR_ITEMS = {"struct":["HundredDice","NormalDice","SizedDice"]};
