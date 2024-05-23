@@ -40,6 +40,16 @@ let dice = HundredDice::new();
 println!("{}", dice.roll()); // 1..=100の範囲で数字がランダムに返される
 ```
 
+**builtin** `SizedDice`
+
+```rs
+use diceutil::builtin::SizedDice;
+use diceutil::Dice;
+
+let dice = SizedDice::new(1, 4); // min, max
+println!("{}", dice.roll()); // min..=maxの範囲で数字がランダムに返される
+```
+
 </details>
 
 # todo
