@@ -4,7 +4,7 @@ use std::sync::Mutex;
 
 /// Has 100-sided dice behavior.
 ///
-/// The possible outcome of a 100-sided die is returned every time you call `roll`.
+/// The possible outcome of a 100-sided dice is returned every time you call `roll`.
 ///
 /// ### Examples
 ///

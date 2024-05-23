@@ -4,7 +4,7 @@ use std::sync::Mutex;
 
 /// Has standard dice behavior.
 ///
-/// The possible outcome of a 6-sided die is returned every time you call `roll`.
+/// The possible outcome of a 6-sided dice is returned every time you call `roll`.
 ///
 /// ### Examples
 ///
