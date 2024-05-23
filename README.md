@@ -26,6 +26,16 @@ let dice = NormalDice::new();
 println!("{}", dice.roll()); // 1..=6の範囲で数字がランダムに返される
 ```
 
+**builtin** `HundredDice`
+
+```rs
+use diceutil::builtin::HundredDice;
+use diceutil::Dice;
+
+let dice = HundredDice::new();
+println!("{}", dice.roll()); // 1..=100の範囲で数字がランダムに返される
+```
+
 # todo
 
 - ドキュメント書いたほうがいいよね〜〜
