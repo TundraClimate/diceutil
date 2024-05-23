@@ -16,6 +16,9 @@ impl Dice<i32> for MyDice {
 }
 ```
 
+<details>
+<summary>Builtin-dices</summary>
+
 **builtin** `NormalDice`
 
 ```rs
@@ -35,6 +38,8 @@ use diceutil::Dice;
 let dice = HundredDice::new();
 println!("{}", dice.roll()); // 1..=100の範囲で数字がランダムに返される
 ```
+
+</details>
 
 # todo
 
