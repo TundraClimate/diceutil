@@ -19,8 +19,8 @@ fn hundred_roll_test() {
 
 #[test]
 fn sized_roll_test() {
-    let dice = SizedDice::new(1..4);
+    let dice = SizedDice::new(1, 4);
     let rolled = dice.roll();
     assert!(rolled.is_positive());
-    assert!((1..4).contains(&rolled));
+    assert!((1..=4).contains(&rolled));
 }

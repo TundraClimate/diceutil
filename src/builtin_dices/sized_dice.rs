@@ -1,6 +1,5 @@
 use crate::Dice;
 use rand::prelude::*;
-use std::ops::Range;
 use std::sync::Mutex;
 
 /// Specify the size and roll the dice.
@@ -14,20 +13,23 @@ use std::sync::Mutex;
 /// use diceutil::Dice;
 ///
 /// # fn main() {
-/// let dice = SizedDice::new(1..=12); // 1..=12 <- "size"
+/// let dice = SizedDice::new(1, 12); // 1, 12 <- "size": min, max
 /// println!("{}", dice.roll()); // Randomly selected from "size" results.
 /// # }
 /// ```
 pub struct SizedDice {
     rand_thread: Mutex<ThreadRng>,
-    size: Range<i32>,
+    min: i32,
+    max: i32,
 }
+
 impl SizedDice {
     /// Create new `SizedDice`.
-    pub fn new(size: Range<i32>) -> SizedDice {
+    pub fn new(min: i32, max: i32) -> SizedDice {
         SizedDice {
             rand_thread: Mutex::new(rand::thread_rng()),
-            size,
+            min,
+            max,
         }
     }
 }
@@ -36,6 +38,6 @@ impl Dice<i32> for SizedDice {
     /// Roll `SizedDice`. Randomly selected from "size" results.
     fn roll(&self) -> i32 {
         let lock = &mut self.rand_thread.lock().expect("mutex lock failed");
-        lock.gen_range(self.size.clone())
+        lock.gen_range(self.min..=self.max)
     }
 }
