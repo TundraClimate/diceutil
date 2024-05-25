@@ -8,3 +8,6 @@ pub use hundred_dice::HundredDice;
 
 mod sized_dice;
 pub use sized_dice::SizedDice;
+
+mod multi_dice;
+pub use multi_dice::MultiDice;
