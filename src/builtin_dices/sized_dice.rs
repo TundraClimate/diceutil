@@ -25,6 +25,13 @@ pub struct SizedDice {
 
 impl SizedDice {
     /// Create new `SizedDice`.
+    ///
+    /// ### Arguments
+    ///
+    /// * `min` - Minimum possible value of the [`roll`]
+    /// * `max` - Maximum possible value of the [`roll`]
+    ///
+    /// [`roll`]: SizedDice::roll
     pub fn new(min: i32, max: i32) -> SizedDice {
         SizedDice {
             rand_thread: Mutex::new(rand::thread_rng()),
