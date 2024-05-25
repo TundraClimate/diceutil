@@ -50,6 +50,20 @@ let dice = SizedDice::new(1, 4); // min, max
 println!("{}", dice.roll()); // min..=maxの範囲で数字がランダムに返される
 ```
 
+**builtin** `MultiDice`
+
+```rs
+use diceutil::builtin::*;
+use diceutil::Dice;
+
+let dice = MultiDice::new(vec![
+    Box::new(NormalDice::default()),
+    Box::new(HundredDice::default()),
+]);
+let rolls = dice.roll(); // ダイスを2個振る
+println!("{}, {}", &rolls[0], &rolls[1]);
+```
+
 </details>
 
 # todo
